@@ -213,7 +213,7 @@ a:hover {
 }
   
   #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
-    width: 120px;
+    width: 140px;
     background-color: #372d50;
 }
 
