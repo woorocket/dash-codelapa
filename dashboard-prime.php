@@ -115,30 +115,6 @@ add_action('wp_before_admin_bar_render', 'dashboard_logo');
 
 
 
-
-
-
-
-<?php
-
-/*
-
-Plugin Name: My custom admin page
-
-Description: Adds a custom admin pages with sample styles and scripts.
-
-Version: 1.0.0
-
-Author: Artbees
-
-Author URI: http://artbees.net
-
-Text Domain: my-custom-admin-page
-
-*/
-
-
-
 function my_admin_menu() {
 
 add_menu_page(
