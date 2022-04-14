@@ -24,16 +24,24 @@ function custom_changes_css() {
   div#flatsome-notice {
     display: none;
 }
-
+button.btn-ajuda {
+    font-size: 16px;
+    background-color: #689938d1;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+}
   
   
   </style>';
 }
 
+
+
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-            background-image: url(https://mktprime.com/wp-content/uploads/2021/11/Marketing-Prime.svg);
+            background-image: url(https://www.agenciaouser.com.br/wp-content/uploads/2021/04/sitepreto-1.png);
 		height:65px;
 		width:320px;
 		    background-size: 220px 94px;
@@ -95,7 +103,7 @@ function dashboard_logo() {
         <style type="text/css">
 #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
     padding: 0 7px;
-    background-image: url(https://mktprime.com/wp-content/uploads/2021/11/Marketing-Prime.svg) !important;
+    background-image: url(https://www.agenciaouser.com.br/wp-content/uploads/2021/04/sitepreto-1.png) !important;
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,6 +112,27 @@ function dashboard_logo() {
 #wpadminbar #wp-admin-bar-wp-logo>.ab-item .ab-icon:before {
     content: " ";
     top: 2px;
+}
+section.conteudo-prime {
+    padding: 30px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px #00000036;
+    margin-left: 0px;
+}
+
+.primelista li:before {
+    content: "\2022";
+    font-size: 30px;
+    display: inline-block;
+    position: absolute;
+    margin-left: -20px;
+    color: #f3007a;
+}
+
+tr#user-1 {
+    display: none;
 }
         </style>
     ';
@@ -119,9 +148,9 @@ function my_admin_menu() {
 
 add_menu_page(
 
-__( 'Sample page', 'my-textdomain' ),
+__( 'Marketing Prime', 'my-textdomain' ),
 
-__( 'Sample menu', 'my-textdomain' ),
+__( 'Marketing Prime', 'my-textdomain' ),
 
 'manage_options',
 
@@ -131,7 +160,7 @@ __( 'Sample menu', 'my-textdomain' ),
 
 'dashicons-schedule',
 
-3
+1
 
 );
 
@@ -147,11 +176,41 @@ function my_admin_page_contents() {
 
 ?>
 
+<section class="conteudo-prime">
+
 <h1>
 
-<?php esc_html_e( 'Welcome to my custom admin page.', 'my-plugin-textdomain' ); ?>
+<?php esc_html_e( 'Painel Marketing Prime', 'my-plugin-textdomain' ); ?>
+	
+	<p>
+		Olá, me chamo Gabriel Lapa, e fui o responsável pelo desenvolvimento do site. 
+		<p>
+			Clique no botão abaixo caso tenha ocorrido algum erro ou bug com wordpress.
+	</p>
+	
+	<a href="https://api.whatsapp.com/send?phone=5511985158293&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20site%20da%20Fernanda%20Ferraz"><button class="btn-ajuda">
+		Entrar em contato
+	</button>
+	</a>	
+	<hr/>
+		<h3>
+			Dicas importantes:
+	</h3>
+		<ul class="primelista">
+			<li>Lembre-se de deixar todos os plugins e temas atualizados.</li>
+			<li>Todo o site foi construindo atráves do UxBuilder (Flatsome)</li>
+			<li>Não insira mídias e arquivos com mais de 1MB</li>
+			<li>Não instale muitos plugins</li>
+			<li>Deixe apenas um tema instalado</li>
+			<li>Deixe apenas um tema instalado</li>
+			<li>O site registra todas as alterações internas, <a target="_blank" href="/wp-admin/admin.php?page=wsal-auditlog">clique aqui para visualizar.</a></li>
+			
+	</ul>
+	
 
 </h1>
+	
+	</section>
 
 <?php
 
@@ -159,39 +218,5 @@ function my_admin_page_contents() {
 
 
 
-function register_my_plugin_scripts() {
 
-wp_register_style( 'my-plugin', plugins_url( 'ddd/css/plugin.css' ) );
-
-wp_register_script( 'my-plugin', plugins_url( 'ddd/js/plugin.js' ) );
-
-}
-
-
-
-add_action( 'admin_enqueue_scripts', 'register_my_plugin_scripts' );
-
-
-
-function load_my_plugin_scripts( $hook ) {
-
-// Load only on ?page=sample-page
-
-if( $hook != 'toplevel_page_sample-page' ) {
-
-return;
-
-}
-
-// Load style & scripts.
-
-wp_enqueue_style( 'my-plugin' );
-
-wp_enqueue_script( 'my-plugin' );
-
-}
-
-
-
-add_action( 'admin_enqueue_scripts', 'load_my_plugin_scripts' );
 
