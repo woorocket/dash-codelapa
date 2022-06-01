@@ -33,6 +33,127 @@ button.btn-ajuda {
 }
   
   
+// cor de fundo
+
+#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+    background-color: white !important;
+}
+
+
+#adminmenuback {
+    background-color: white !important;
+}
+#adminmenuwrap {
+    background-color: white !important;
+}
+
+#wpadminbar {
+    
+    color: #000000;
+   
+    background: white;
+}
+div#adminmenuwrap {
+    box-shadow: 5px 1px 20px #0000000f;
+}
+
+.wp-core-ui .button-primary {
+   
+    background-size: 100% 200% !important;
+    background-image: linear-gradient(to bottom, #faa61a 50%, #383838 50%) !important;
+     transition:background-position 1s;
+    border: none;
+}
+
+
+
+.wp-core-ui .button-primary {
+   background-position:0 -100%;
+}
+
+  #adminmenu a {
+   
+    color: #000000;
+}
+
+div#awcfe_notice {
+    display: none;
+}
+
+ul#adminmenu {
+    background-color: white;
+}
+#adminmenu div.wp-menu-image:before {
+   
+    color: rgb(0 0 0 / 65%) !important;
+}
+
+
+
+
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+    background: #faa61a;
+    color: #fff;
+}
+
+#adminmenu .wp-submenu {
+ 
+    background-color: white;
+   
+}
+
+
+
+
+#adminmenu .wp-submenu a {
+    color: #000000 !important;
+   
+    font-size: 12px;
+    }
+	
+	.opensub {
+    background-color: #faa61a !important;
+   
+}
+
+
+#adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+    position: relative;
+    background-color: #faa61a;
+    color: #000000;
+}
+
+#wpadminbar .ab-empty-item, #wpadminbar a.ab-item, #wpadminbar>#wp-toolbar span.ab-label, #wpadminbar>#wp-toolbar span.noticon {
+    color: #000000;
+}
+
+
+#wpadminbar {
+   
+   
+    line-height: 3.46153846;
+    height: 40px;
+   
+   
+   
+}
+
+
+
+#wpadminbar #adminbarsearch:before, #wpadminbar .ab-icon:before, #wpadminbar .ab-item:before {
+
+    color: rgb(250 166 26) !important;
+}
+#adminmenu .wp-not-current-submenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu {
+    box-shadow: 0px 0px 20px #00000030;
+    border-radius: 6px;
+    left: 150px;
+}
+
+
+
+
+
   </style>';
 }
 
