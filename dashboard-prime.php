@@ -32,13 +32,6 @@ button.btn-ajuda {
     color: white;
 }
   
-    div#setting-error-tgmpa {
-    display: none;
-}
-
-.notice.notice-success.is-dismissible {
-    display: none;
-}
   
 // cor de fundo
 
@@ -169,7 +162,7 @@ ul#adminmenu {
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-            background-image: url(https://www.agenciaouser.com.br/wp-content/uploads/2021/04/sitepreto-1.png);
+            background-image: url(https://mktprime.com/wp-content/uploads/2021/11/Marketing-Prime.svg);
 		height:65px;
 		width:320px;
 		    background-size: 220px 94px;
@@ -198,19 +191,23 @@ function my_login_logo() { ?>
 }
 		
 		
-		body.login.js.login-action-.wp-core-ui {
-    background-image: linear-gradient(
-178deg
-, #e01678, black) !important;
+		body.login.js.login-action-login {
+    background-image: url(https://mktprime.com/wp-content/uploads/2021/09/Componente-3-–-1.svg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+		form#language-switcher {
+    display: none;
+}
+		.mo-openid-app-icons {
+    display: none;
 }
 		
-		body.login.js.login-action-login {
-    background: #f1ca4e;
+		.privacy-policy-page-link {
+    display: none;
 }
-		body.login.js.login-action-login {
-    background: #f1ca4e;
-    background-image: linear-gradient(359deg, #0000008f, transparent);
-}
+		
 		
     </style>
 <?php }
@@ -231,7 +228,7 @@ function dashboard_logo() {
         <style type="text/css">
 #wpadminbar #wp-admin-bar-wp-logo>.ab-item {
     padding: 0 7px;
-    background-image: url(https://www.agenciaouser.com.br/wp-content/uploads/2021/04/sitepreto-1.png) !important;
+    background-image: url(https://mktprime.com/wp-content/uploads/2021/11/Marketing-Prime.svg) !important;
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -249,7 +246,12 @@ section.conteudo-prime {
     box-shadow: 0px 1px 5px #00000036;
     margin-left: 0px;
 }
-
+  div#setting-error-tgmpa {
+    display: none;
+}
+.notice.notice-success.is-dismissible {
+    display: none;
+}
 .primelista li:before {
     content: "\2022";
     font-size: 30px;
@@ -316,7 +318,7 @@ function my_admin_page_contents() {
 			Clique no botão abaixo caso tenha ocorrido algum erro ou bug com wordpress.
 	</p>
 	
-	<a href="https://api.whatsapp.com/send?phone=5511985158293&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20site%20da%20Fernanda%20Ferraz"><button class="btn-ajuda">
+	<a href="https://api.whatsapp.com/send?phone=5511985158293&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20um%20site"><button class="btn-ajuda">
 		Entrar em contato
 	</button>
 	</a>	
@@ -330,8 +332,7 @@ function my_admin_page_contents() {
 			<li>Não insira mídias e arquivos com mais de 1MB</li>
 			<li>Não instale muitos plugins</li>
 			<li>Deixe apenas um tema instalado</li>
-			<li>Deixe apenas um tema instalado</li>
-			<li>O site registra todas as alterações internas, <a target="_blank" href="/wp-admin/admin.php?page=wsal-auditlog">clique aqui para visualizar.</a></li>
+			
 			
 	</ul>
 	
