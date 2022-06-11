@@ -32,6 +32,13 @@ button.btn-ajuda {
     color: white;
 }
   
+    div#setting-error-tgmpa {
+    display: none;
+}
+
+.notice.notice-success.is-dismissible {
+    display: none;
+}
   
 // cor de fundo
 
