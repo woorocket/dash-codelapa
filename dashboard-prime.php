@@ -38,7 +38,9 @@ button.btn-ajuda {
 #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
     background-color: white !important;
 }
-
+.notice.notice-warning {
+    display: none;
+}
 
 #adminmenuback {
     background-color: white !important;
