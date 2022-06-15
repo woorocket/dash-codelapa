@@ -49,6 +49,11 @@ button.btn-ajuda {
     background-color: white !important;
 }
 
+.wpbody-content div#dashboard-widgets-wrap {
+    display: none;
+}
+
+
 #wpadminbar {
     
     color: #000000;
