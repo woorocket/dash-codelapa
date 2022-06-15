@@ -49,7 +49,7 @@ button.btn-ajuda {
     background-color: white !important;
 }
 
-.wpbody-content div#dashboard-widgets-wrap {
+#wpbody-content div#dashboard-widgets-wrap {
     display: none;
 }
 
