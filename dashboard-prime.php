@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Marketing Prime
- * Plugin URI: https://mktprime.com/
+ * Plugin Name: WooRocket
+ * Plugin URI: https://woorocket.com.br
  * Description: Customize wordpress dashboard
  * Author: Gabriel Lapa
- * Author URI: https://mktprime.com/
+ * Author URI: https://woorocket.com.br
  * Version: 1.0
  * Requires at least: 4.4
  * Tested up to: 5.8
@@ -17,9 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 define( 'SMDFW_DIR', plugin_dir_path( __FILE__ ) );
 
-add_action('admin_head', 'custom_changes_css');
+add_action('admin_head', 'customizar_painel');
 
-function custom_changes_css() {
+function customizar_painel() {
   echo '<style>
   div#flatsome-notice {
     display: none;
