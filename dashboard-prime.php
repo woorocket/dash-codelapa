@@ -52,7 +52,9 @@ ul#wp-admin-bar-top-secondary {
     background: #ffffff;
    
 }
-
+.wrap div#message {
+    display: none;
+}
 
 div#adminmenuwrap {
     overflow-y: auto;
