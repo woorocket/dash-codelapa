@@ -44,6 +44,15 @@ display: none;
 .flatsome-panel form {
 display: none !important;
 }
+ul#wp-admin-bar-top-secondary {
+    background-color: white;
+}
+#wpadminbar .menupop .ab-sub-wrapper, #wpadminbar .shortlink-input {
+   
+    background: #ffffff;
+   
+}
+
 
 div#adminmenuwrap {
     overflow-y: auto;
@@ -129,6 +138,18 @@ body {
 	letter-spacing: 0.8px;
    
 }
+
+button.btn-ajuda {
+    background-color: #3b76e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    text-decoration: none !important;
+    margin: 10px 0px;
+    font-size: 70%;
+    padding: 5px 20px;
+}
 #adminmenu .awaiting-mod, #adminmenu .menu-counter, #adminmenu .update-plugins {
  
     background-color: #3b76e1;
@@ -186,10 +207,10 @@ html.wp-toolbar {
     padding-top: 0px;
 }
 
-
-div#wpadminbar {
+ul#wp-admin-bar-root-default {
     display: none;
 }
+
 ul#adminmenu:before {
     content: "";
     background-image: url(https://woorocket.com.br/wp-content/uploads/2022/08/Woo-Rocket.png);
@@ -204,6 +225,35 @@ ul#adminmenu:before {
     margin-top: 30px;
 }
 
+#wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper {
+    right: auto;
+    left: 100%;
+    bottom: 60%;
+}
+div#wpadminbar {
+    background-color: #ff0000;
+    max-width: fit-content;
+}
+
+div#wp-toolbar a.ab-item {
+    color: #040622 !important;
+}
+div#wpadminbar {
+    background-color: #ffffff00;
+    min-width: fit-content;
+}
+div#wp-toolbar {
+    background-color: white;
+    border-radius: 7px;
+    bottom: 7px;
+    left: 26px;
+}
+
+div#wpadminbar {
+    position: fixed;
+    bottom: 0% !important;
+    top: auto;
+}
 ul#adminmenu {
     padding-left: 20px;
 }
@@ -231,9 +281,7 @@ div#adminmenuwrap {
     transition: 1s;
 }
 
-span.collapse-button-icon {
-    display: none !important;
-}
+
 div#adminmenuwrap::-webkit-scrollbar-thumb {
     background: #70718273;
     border-radius: 100px;
@@ -276,13 +324,7 @@ display:none;
     border-left: 4px solid #040622;
 }
 
-li#collapse-menu {
-    position: absolute;
-    top: 5%;
-    margin-left: 100px;
-    display: block;
-    left: 70%;
-}
+
 
 .folded #adminmenu, .folded #adminmenu li.menu-top, .folded #adminmenuback, .folded #adminmenuwrap {
     width: 36px;
@@ -298,16 +340,7 @@ span.collapse-button-label {
     visibility: hidden;
     position: absolute !important;
 }
-span.collapse-button-label:before {
-    content: "";
-    background-image: url(https://woorocket.com.br/wp-content/uploads/2022/11/Menu.svg);
-    display: block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 25px;
-    height: 25px;
-    visibility: visible;
-}
+
 .wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
     background: #e31676;
     border-color: #e31676;
@@ -337,7 +370,7 @@ span.collapse-button-label:before {
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-            background-image: url(https://mktprime.com/wp-content/uploads/2021/11/Marketing-Prime.svg);
+            background-image: url(https://woorocket.com.br/wp-content/uploads/2022/08/Woo-Rocket.png);
 		height:65px;
 		width:320px;
 		    background-size: 220px 94px;
@@ -353,6 +386,20 @@ function my_login_logo() { ?>
 		p#backtoblog {
     display: none;
 }
+div#login {
+    min-height: -webkit-fill-available;
+    background-color: #061827d4;
+    left: 0%;
+    margin-left: 0;
+    padding: 70px;
+    width: 300px;
+    box-shadow: 3px 0px 14px #00000033;
+}
+		
+	#login p#nav a {
+    color: white !important;
+}
+		
 		.login form {
     margin-top: 20px;
     margin-left: 0;
@@ -367,8 +414,8 @@ function my_login_logo() { ?>
 		
 		
 		body.login.js.login-action-login {
-    background-image: url(https://mktprime.com/wp-content/uploads/2021/09/Componente-3-–-1.svg);
-    background-repeat: repeat;
+    background-image: url(https://woorocket.com.br/wp-content/uploads/2022/11/iStock-1281468896.svg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
 }
@@ -393,7 +440,7 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 //changing the url on the logo to redirect them
 function mb_login_url() {  return home_url(); }
-add_filter( 'login_headerurl', 'https://mktprime.com/' );
+add_filter( 'login_headerurl', 'https://woorocket.com.br/' );
 
 
 
@@ -412,6 +459,28 @@ function dashboard_logo() {
 #wpadminbar #wp-admin-bar-wp-logo>.ab-item .ab-icon:before {
     content: " ";
     top: 2px;
+}
+div#wpadminbar {
+    display: none;
+}
+
+
+
+
+
+button.logout {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    text-decoration: none !important;
+    margin: 10px 0px;
+    font-size: 70%;
+    padding: 5px 20px;
+}
+section.conteudo-prime a {
+    text-decoration: none;
 }
 section.conteudo-prime {
     padding: 30px;
@@ -453,9 +522,9 @@ function my_admin_menu() {
 
 add_menu_page(
 
-__( 'Marketing Prime', 'my-textdomain' ),
+__( 'WooRocket', 'my-textdomain' ),
 
-__( 'Marketing Prime', 'my-textdomain' ),
+__( 'Suporte WooRocket', 'my-textdomain' ),
 
 'manage_options',
 
@@ -485,16 +554,21 @@ function my_admin_page_contents() {
 
 <h1>
 
-<?php esc_html_e( 'Painel Marketing Prime', 'my-plugin-textdomain' ); ?>
+<?php esc_html_e( 'Suporte WooRocket', 'my-plugin-textdomain' ); ?>
 	
 	<p>
-		Olá, me chamo Gabriel Lapa, e fui o responsável pelo desenvolvimento do site. 
+		
 		<p>
-			Clique no botão abaixo caso tenha ocorrido algum erro ou bug com wordpress.
+			Clique no botão abaixo caso precise de suporte para o site.
 	</p>
 	
-	<a href="https://api.whatsapp.com/send?phone=5511985158293&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20um%20site"><button class="btn-ajuda">
-		Entrar em contato
+	<a target="_blank" href="https://app.woorocket.com.br/minha-conta/"><button class="btn-ajuda">
+		Acessar suporte
+	</button>
+	</a>	
+	
+	<a target="_blank" href="/wp-login.php?action=logout"><button class="logout">
+		Logout
 	</button>
 	</a>	
 	<hr/>
@@ -519,6 +593,8 @@ function my_admin_page_contents() {
 <?php
 
 }
+
+
 
 
 
