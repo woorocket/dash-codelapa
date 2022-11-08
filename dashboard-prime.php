@@ -21,148 +21,316 @@ add_action('admin_head', 'customizar_painel');
 
 function customizar_painel() {
   echo '<style>
-  div#flatsome-notice {
-    display: none;
+div#flatsome-notice {
+display: none;
 }
-button.btn-ajuda {
-    font-size: 16px;
-    background-color: #689938d1;
+
+div#minor-publishing-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.updraft-ad-container.updated {
+display: none !important;
+}
+div#setting-error-tgmpa {
+display: none;
+}
+li#wp-admin-bar-flatsome_panel_license {
+display: none !important;
+}
+.toplevel_page_flatsome-panel ul.wp-submenu li:nth-child(3) {
+display: none;
+}
+.flatsome-panel form {
+display: none !important;
+}
+
+div#adminmenuwrap {
+    overflow-y: auto;
+    max-height: 95vh;
+    overflow-x: hidden;
+}
+.wp-core-ui .button-primary {
+    background: #3b76e1 !important;
+    border-color: #3b76e1 !important;
+  
+}
+.wp-core-ui .button, .wp-core-ui .button-secondary {
+  ;
+    font-size: 90%;
+}
+div#screen-meta {
+    border-radius: 10px;
+    margin-bottom: 5px;
+    border: 2px solid #bbbbbb;
+    background-color: #ffffff00;
+    color: #585858;
+}
+
+.wp-core-ui .button, .wp-core-ui .button-secondary {
+   
+   
     border: none;
-    padding: 5px 10px;
-    color: white;
+    box-shadow: 1px 2px #0000004a;
+    font-weight: 700;
 }
-  
-  
-// cor de fundo
+#screen-meta-links .show-settings {
+    border-radius: 6px;
+    border: 2px solid #bbbbbb;
+    background-color: #ffffff00;
+    color: #6e6e6e;
+}
+.wp-core-ui .button-secondary:hover, .wp-core-ui .button.hover, .wp-core-ui .button:hover {
+    background: #e21678;
+    border-color: #e21678;
+    color: #ffffff;
+}
+
+#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap, #adminmenu .wp-submenu, body {
+    
+    background-color: #040622;
+	
+}
+
+
 
 #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
-    background-color: white !important;
-}
-.notice.notice-warning {
-    display: none;
-}
-
-#adminmenuback {
-    background-color: white !important;
-}
-#adminmenuwrap {
-    background-color: white !important;
-}
-
-#wpbody-content div#dashboard-widgets-wrap {
-    display: none;
-}
-
-
-#wpadminbar {
-    
-    color: #000000;
+    width: 230px;
+   }
    
-    background: white;
+   #wpcontent, #wpfooter {
+    margin-left: 230px;
 }
-div#adminmenuwrap {
-    box-shadow: 5px 1px 20px #0000000f;
+input#publish {
+    background-color: #009688 !important;
+}
+div#wpbody {
+    background-color: #f1f3f7;
+    padding: 30px 10px;
+	 background-color: #f1f3f7;
+	 border-radius: 45px 0px 0px 45px;
 }
 
-.wp-core-ui .button-primary {
-   
-    background-size: 100% 200% !important;
-    background-image: linear-gradient(to bottom, #faa61a 50%, #383838 50%) !important;
-     transition:background-position 1s;
+.postbox {
+    border-radius: 15px;
+    box-shadow: -1px 1px 8px #0000001c;
     border: none;
+	  transition:0.6s;
+	  padding: 10px;
 }
 
-
-
-.wp-core-ui .button-primary {
-   background-position:0 -100%;
-}
-
-  #adminmenu a {
+#adminmenu a {
    
-    color: #000000;
+    color: #707182;
+}
+body {
+  
+    font-family: "Work Sans", sans-serif !important;
+	letter-spacing: 0.8px;
+   
+}
+#adminmenu .awaiting-mod, #adminmenu .menu-counter, #adminmenu .update-plugins {
+ 
+    background-color: #3b76e1;
+  
 }
 
-div#awcfe_notice {
+.wrap .add-new-h2, .wrap .add-new-h2:active, .wrap .page-title-action, .wrap .page-title-action:active {
+    border-radius: 5px;
+    color: #040622;
+    border: none;
+    background-color: white;
+    box-shadow: 2px 3px 0px #00000057;
+	  transition:0.6s;
+}
+#menu-management .menu-edit, #menu-settings-column .accordion-container, .comment-ays, .feature-filter, .imgedit-group, .manage-menus, .menu-item-handle, .popular-tags, .stuffbox, .widget-inside, .widget-top, .widgets-holder-wrap, .wp-editor-container, p.popular-tags, table.widefat {
+    
+    border: none;
+    box-shadow: -1px 1px 8px #0000001c;
+	border-radius: 15px;
+}
+
+div#wpfooter {
     display: none;
+}
+
+a {
+    color: #040622;
+  
+}
+
+
+
+
+::-webkit-scrollbar 
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+	padding:20px;
+
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #040622;
+    border-radius: 100px;
+}
+
+thead {
+    height: 60px;
+}
+
+html.wp-toolbar {
+    padding-top: 0px;
+}
+
+
+div#wpadminbar {
+    display: none;
+}
+ul#adminmenu:before {
+    content: "";
+    background-image: url(https://woorocket.com.br/wp-content/uploads/2022/08/Woo-Rocket.png);
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 ul#adminmenu {
-    background-color: white;
+    padding-left: 20px;
 }
-#adminmenu div.wp-menu-image:before {
-   
-    color: rgb(0 0 0 / 65%) !important;
+ul#adminmenu li {
+    margin: 8px 0px;
 }
-
-
-
-
 #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
-    background: #faa61a;
-    color: #fff;
+    background: #2271b100;
+  
 }
 
 #adminmenu .wp-submenu {
- 
-    background-color: white;
    
+    left: 200px;
+	border-radius:10px;
+  
 }
 
+div#adminmenuwrap::-webkit-scrollbar {
+    width: 5px;
+    background: none;
+}
+div#adminmenuwrap {
+  
+    transition: 1s;
+}
 
-
-
-#adminmenu .wp-submenu a {
-    color: #000000 !important;
+span.collapse-button-icon {
+    display: none !important;
+}
+div#adminmenuwrap::-webkit-scrollbar-thumb {
+    background: #70718273;
+    border-radius: 100px;
+	visibility: hidden;
+    transition: 1s;
+}
+div#adminmenuwrap:hover::-webkit-scrollbar-thumb {
    
-    font-size: 12px;
-    }
+	visibility:visible;
+    transition: 1s;
+}
+div#adminmenuwrap::-webkit-scrollbar-thumb {
+    background: #70718273;
+    border-radius: 100px;
 	
-	.opensub {
-    background-color: #faa61a !important;
+}
+div#wpbody {
+    min-height: 92vh;
+}
+
+#wpcontent {
+ 
+    padding-left: 6px;
+}
+
+.wrap .notice{
+display:none;
+}
+
+.woocommerce-layout__header {
+    ;
+    width: calc(100% - 230px);
+    top: 32px;
+	    top: 0;
+    
+}
+
+
+.plugin-update-tr.active td, .plugins .active th.check-column {
+    border-left: 4px solid #040622;
+}
+
+li#collapse-menu {
+    position: absolute;
+    top: 5%;
+    margin-left: 100px;
+    display: block;
+    left: 70%;
+}
+
+.folded #adminmenu, .folded #adminmenu li.menu-top, .folded #adminmenuback, .folded #adminmenuwrap {
+    width: 36px;
+    padding: 0;
+}
+.folded #adminmenu:before{
+display:none;
+}
+
+	
+
+span.collapse-button-label {
+    visibility: hidden;
+    position: absolute !important;
+}
+span.collapse-button-label:before {
+    content: "";
+    background-image: url(https://woorocket.com.br/wp-content/uploads/2022/11/Menu.svg);
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    visibility: visible;
+}
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
+    background: #e31676;
+    border-color: #e31676;
+ 
+}
+
+.wp-core-ui .button, .wp-core-ui .button-secondary {
+    color: #ffffff;
+    background: #3b76e1;
+    
+}
+
+
+.theme-browser .theme .theme-screenshot {
    
+    border-radius: 10px 10px 0px 0px;
 }
-
-
-#adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
-    position: relative;
-    background-color: #faa61a;
-    color: #000000;
-}
-
-#wpadminbar .ab-empty-item, #wpadminbar a.ab-item, #wpadminbar>#wp-toolbar span.ab-label, #wpadminbar>#wp-toolbar span.noticon {
-    color: #000000;
-}
-
-
-#wpadminbar {
-   
-   
-    line-height: 3.46153846;
-    height: 40px;
-   
-   
-   
-}
-
-
-
-#wpadminbar #adminbarsearch:before, #wpadminbar .ab-icon:before, #wpadminbar .ab-item:before {
-
-    color: rgb(250 166 26) !important;
-}
-#adminmenu .wp-not-current-submenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu {
-    box-shadow: 0px 0px 20px #00000030;
-    border-radius: 6px;
-    left: 150px;
+</style>';
 }
 
 
 
 
-
-  </style>';
-}
 
 
 
