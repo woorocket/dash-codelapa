@@ -569,7 +569,7 @@ function my_admin_page_contents() {
 	</button>
 	</a>	
 	
-	<a target="_blank" href="/wp-login.php?action=logout"><button class="logout">
+	<a target="_blank" href="/painel?action=logout"><button class="logout">
 		Logout
 	</button>
 	</a>	
