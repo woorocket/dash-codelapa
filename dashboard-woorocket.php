@@ -551,7 +551,7 @@ add_action('wp_before_admin_bar_render', 'dashboard_logo');
 
 
 
-function my_admin_menu() {
+function my_admin_menu2() {
 
 add_menu_page(
 
@@ -575,7 +575,7 @@ __( 'Suporte WooRocket', 'my-textdomain' ),
 
 
 
-add_action( 'admin_menu', 'my_admin_menu' );
+add_action( 'admin_menu', 'my_admin_menu2' );
 
 
 
