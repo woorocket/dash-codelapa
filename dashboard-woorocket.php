@@ -25,12 +25,7 @@ function customizar_painel() {
 
 
 @media only screen and (max-width: 600px) {
- div#wpadminbar {
-    bottom: auto !important;
-    top: 0% !important;
-    background-color: #040622 !important;
-    min-width: 100% !important;
-}
+
 ul#wp-admin-bar-root-default {
     display: block !important !important;
 }
@@ -43,6 +38,9 @@ div#wpbody {
 }
 
 }
+ul#adminmenu {
+    padding-top: 30px;
+}
 
 @media screen and (min-width: 800px) {
    div#adminmenuwrap {
@@ -52,10 +50,7 @@ div#wpbody {
 }
 }
 
-ul#wp-admin-bar-root-default {
-    visibility: hidden;
-    position: absolute;
-}
+
 
 div#flatsome-notice {
 display: none;
@@ -82,17 +77,13 @@ display: none;
 .flatsome-panel form {
 display: none !important;
 }
-ul#wp-admin-bar-top-secondary {
-    background-color: white;
-}
-#wpadminbar .menupop .ab-sub-wrapper, #wpadminbar .shortlink-input {
-   
-    background: #ffffff;
-   
+button.button.save_order.button-primary {
+    background-color: #009688 !important;
 }
 .woocommerce-message {
     display: none;
 }
+
 
 .wp-core-ui .button-primary {
     background: #3b76e1 !important;
@@ -150,9 +141,9 @@ input#publish {
 }
 div#wpbody {
     background-color: #f1f3f7;
-    padding: 30px 10px;
+    padding: 50px 10px;
 	 background-color: #f1f3f7;
-	 border-radius: 45px 0px 0px 45px;
+	
 }
 
 .postbox {
@@ -265,23 +256,11 @@ ul#adminmenu:before {
     left: 100%;
     bottom: 60%;
 }
- div#wpadminbar {
-    background-color: #ff0000;
-    max-width: fit-content;
-}
-div#wpadminbar {
-    position: fixed;
-    bottom: 0% !important;
-    top: auto;
-	 background-color: #ffffff00;
-    min-width: fit-content;
-}
 
 
 
-div#wp-toolbar a.ab-item {
-    color: #040622 !important;
-}
+
+
 
 div#wp-toolbar {
     background-color: white;
@@ -350,9 +329,9 @@ display:none;
 
 .woocommerce-layout__header {
     ;
-    width: calc(100% - 230px);
+    width: calc(100% - 245px);
     top: 32px;
-	    top: 0;
+	  
     
 }
 
@@ -415,7 +394,23 @@ function my_login_logo() { ?>
         	padding-bottom: 30px;
         }
 		
+		form#loginform p {
+    color: white !important;
+}
+		.user-pass-wrap label {
+    color: white !important;
+}
+		#loginform input[type=submit], #loginform .submit input[type=button] {
+    background-color: #e31678 !important;
+    
+}
 		
+		div#wlcms-login-wrapper {
+    height: -webkit-fill-available;
+}
+		.mo_btn-social.mo_btn-google {
+    display: none;
+}
 	.wp-core-ui .button-primary {
     background: #e31678 !important;
     border-color: #e11678 !important;
@@ -450,7 +445,7 @@ div#login {
 }
 		
 		
-		body.login.js.login-action-login {
+		body.login {
     background-image: url(https://woorocket.com.br/wp-content/uploads/2022/11/iStock-1281468896.svg) !important;
     background-repeat: no-repeat;
     background-size: cover;
