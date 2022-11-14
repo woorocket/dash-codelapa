@@ -90,7 +90,9 @@ ul#wp-admin-bar-top-secondary {
     background: #ffffff;
    
 }
-
+.woocommerce-message {
+    display: none;
+}
 
 .wp-core-ui .button-primary {
     background: #3b76e1 !important;
