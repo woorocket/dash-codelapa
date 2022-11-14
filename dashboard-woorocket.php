@@ -251,12 +251,6 @@ ul#adminmenu:before {
 
 
 
-#wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper {
-    right: auto;
-    left: 100%;
-    bottom: 60%;
-}
-
 
 
 
