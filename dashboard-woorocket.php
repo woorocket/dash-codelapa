@@ -21,10 +21,48 @@ add_action('admin_head', 'customizar_painel');
 
 function customizar_painel() {
   echo '<style>
+
+
+
+@media only screen and (max-width: 600px) {
+ div#wpadminbar {
+    bottom: auto !important;
+    top: 0% !important;
+    background-color: #040622 !important;
+    min-width: 100% !important;
+}
+ul#wp-admin-bar-root-default {
+    display: block !important !important;
+}
+ul#wp-admin-bar-root-default {
+    visibility: visible !important;
+    position: inherit !important;
+}
+div#wpbody {
+    padding-top: 55px !important;
+}
+
+}
+
+@media screen and (min-width: 800px) {
+   div#adminmenuwrap {
+    overflow-y: auto;
+    max-height: 95vh;
+    overflow-x: hidden;
+}
+}
+
+ul#wp-admin-bar-root-default {
+    visibility: hidden;
+    position: absolute;
+}
+
 div#flatsome-notice {
 display: none;
 }
-
+.page div#wpadminbar {
+    display: block !important;
+}
 div#minor-publishing-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -52,15 +90,8 @@ ul#wp-admin-bar-top-secondary {
     background: #ffffff;
    
 }
-.wrap div#message {
-    display: none;
-}
 
-div#adminmenuwrap {
-    overflow-y: auto;
-    max-height: 95vh;
-    overflow-x: hidden;
-}
+
 .wp-core-ui .button-primary {
     background: #3b76e1 !important;
     border-color: #3b76e1 !important;
@@ -209,9 +240,7 @@ html.wp-toolbar {
     padding-top: 0px;
 }
 
-ul#wp-admin-bar-root-default {
-    display: none;
-}
+
 
 ul#adminmenu:before {
     content: "";
@@ -227,23 +256,31 @@ ul#adminmenu:before {
     margin-top: 30px;
 }
 
+
+
 #wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper {
     right: auto;
     left: 100%;
     bottom: 60%;
 }
-div#wpadminbar {
+ div#wpadminbar {
     background-color: #ff0000;
     max-width: fit-content;
 }
+div#wpadminbar {
+    position: fixed;
+    bottom: 0% !important;
+    top: auto;
+	 background-color: #ffffff00;
+    min-width: fit-content;
+}
+
+
 
 div#wp-toolbar a.ab-item {
     color: #040622 !important;
 }
-div#wpadminbar {
-    background-color: #ffffff00;
-    min-width: fit-content;
-}
+
 div#wp-toolbar {
     background-color: white;
     border-radius: 7px;
@@ -251,11 +288,7 @@ div#wp-toolbar {
     left: 26px;
 }
 
-div#wpadminbar {
-    position: fixed;
-    bottom: 0% !important;
-    top: auto;
-}
+
 ul#adminmenu {
     padding-left: 20px;
 }
@@ -416,7 +449,7 @@ div#login {
 		
 		
 		body.login.js.login-action-login {
-    background-image: url(https://woorocket.com.br/wp-content/uploads/2022/11/iStock-1281468896.svg);
+    background-image: url(https://woorocket.com.br/wp-content/uploads/2022/11/iStock-1281468896.svg) !important;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -462,9 +495,7 @@ function dashboard_logo() {
     content: " ";
     top: 2px;
 }
-div#wpadminbar {
-    display: none;
-}
+
 
 
 
@@ -520,7 +551,7 @@ add_action('wp_before_admin_bar_render', 'dashboard_logo');
 
 
 
-function my_admin_menu_woorocket() {
+function my_admin_menu() {
 
 add_menu_page(
 
@@ -544,7 +575,7 @@ __( 'Suporte WooRocket', 'my-textdomain' ),
 
 
 
-add_action( 'admin_menu', 'my_admin_menu_woorocket' );
+add_action( 'admin_menu', 'my_admin_menu' );
 
 
 
@@ -569,10 +600,7 @@ function my_admin_page_contents() {
 	</button>
 	</a>	
 	
-	<a target="_blank" href="/painel?action=logout"><button class="logout">
-		Logout
-	</button>
-	</a>	
+	
 	<hr/>
 		<h3>
 			Dicas importantes:
