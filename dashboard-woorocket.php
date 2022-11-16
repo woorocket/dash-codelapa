@@ -48,9 +48,12 @@ ul#adminmenu {
     max-height: 95vh;
     overflow-x: hidden;
 }
+.opensub .wp-submenu {
+   
+    position: revert !important;
+	transition:0.6s;
+   
 }
-
-
 
 div#flatsome-notice {
 display: none;
@@ -251,6 +254,12 @@ ul#adminmenu:before {
 
 
 
+#wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper {
+    right: auto;
+    left: 100%;
+    bottom: 60%;
+}
+
 
 
 
@@ -275,12 +284,12 @@ ul#adminmenu li {
   
 }
 
-#adminmenu .wp-submenu {
-   
-    left: 200px;
-	border-radius:10px;
-  
+ul.wp-submenu.wp-submenu-wrap {
+    max-height: 200px;
+    overflow: auto !important;
 }
+
+
 
 div#adminmenuwrap::-webkit-scrollbar {
     width: 5px;
