@@ -398,11 +398,9 @@ function my_login_logo() { ?>
         }
 		
 		form#loginform p {
-    color: white !important;
+    color: #320c68 !important;
 }
-		.user-pass-wrap label {
-    color: white !important;
-}
+		
 		#loginform input[type=submit], #loginform .submit input[type=button] {
     background-color: #e31678 !important;
     
@@ -433,6 +431,9 @@ div#login {
 		
 	#login p#nav a {
     color: white !important;
+}
+		.user-pass-wrap label {
+    color: #510f6c !important;
 }
 		
 		.login form {
