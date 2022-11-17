@@ -48,20 +48,28 @@ ul#adminmenu {
     max-height: 95vh;
     overflow-x: hidden;
 }
-.opensub .wp-submenu {
-   
-    display: none;
-   
+
+#adminmenu a.menu-top:focus+.wp-submenu, .js #adminmenu .opensub .wp-submenu, .js #adminmenu .sub-open, .no-js li.wp-has-submenu:hover .wp-submenu{
+top: 35px !important;
+left: 10px !important;
 }
+.opensub ul.wp-submenu.wp-submenu-wrap {
+    background-color: #232546 !important;
+    border-radius: 6px;
+    box-shadow: -3px 3px 0px white !important;
+}
+#adminmenu .wp-not-current-submenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu {
+    max-width: 185px;
+    min-width: 185px;
+}
+
+
+
 
 tr[data-slug="woorocket"] {
     display: none;
 }
 
-#adminmenu .wp-submenu {
-    position: revert;
-    display: none;
-}
 
 div#flatsome-notice {
 display: none;
@@ -292,10 +300,7 @@ ul#adminmenu li {
   
 }
 
-ul.wp-submenu.wp-submenu-wrap {
-    max-height: 200px;
-    overflow: auto !important;
-}
+
 
 
 
