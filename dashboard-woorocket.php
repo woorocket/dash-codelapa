@@ -50,9 +50,17 @@ ul#adminmenu {
 }
 .opensub .wp-submenu {
    
-    position: revert !important;
-	transition:0.6s;
+    display: none;
    
+}
+
+tr[data-slug="woorocket"] {
+    display: none;
+}
+
+#adminmenu .wp-submenu {
+    position: revert;
+    display: none;
 }
 
 div#flatsome-notice {
