@@ -339,9 +339,7 @@ div#wpbody {
     padding-left: 6px;
 }
 
-.wrap .notice{
-display:none;
-}
+
 
 .woocommerce-layout__header {
     ;
