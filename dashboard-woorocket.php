@@ -43,25 +43,19 @@ ul#adminmenu {
 }
 
 @media screen and (min-width: 800px) {
-   div#adminmenuwrap {
-    overflow-y: auto;
-    max-height: 95vh;
-    overflow-x: hidden;
-}
+  
 
-#adminmenu a.menu-top:focus+.wp-submenu, .js #adminmenu .opensub .wp-submenu, .js #adminmenu .sub-open, .no-js li.wp-has-submenu:hover .wp-submenu{
-top: 35px !important;
-left: 10px !important;
+#adminmenu .wp-submenu {
+    
+    left: 230px;
+  
 }
 .opensub ul.wp-submenu.wp-submenu-wrap {
     background-color: #232546 !important;
     border-radius: 6px;
     box-shadow: -3px 3px 0px white !important;
 }
-#adminmenu .wp-not-current-submenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu {
-    max-width: 185px;
-    min-width: 185px;
-}
+
 
 
 
@@ -270,13 +264,6 @@ ul#adminmenu:before {
 
 
 
-#wpadminbar .ab-top-secondary .menupop .ab-sub-wrapper {
-    right: auto;
-    left: 100%;
-    bottom: 60%;
-}
-
-
 
 
 
@@ -289,9 +276,7 @@ div#wp-toolbar {
 }
 
 
-ul#adminmenu {
-    padding-left: 20px;
-}
+
 ul#adminmenu li {
     margin: 8px 0px;
 }
@@ -339,7 +324,9 @@ div#wpbody {
     padding-left: 6px;
 }
 
-
+.wrap .notice{
+display:none;
+}
 
 .woocommerce-layout__header {
     ;
