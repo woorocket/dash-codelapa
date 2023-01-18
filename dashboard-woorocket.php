@@ -22,8 +22,12 @@ add_action('admin_head', 'customizar_painel');
 function customizar_painel() {
   echo '<style>
 
-
-
+.updated.success.fs-notice.fs-has-title.fs-slug-wpcf7-redirect.fs-type-plugin {
+    display: none !important;
+}
+div#aiowps-dashnotice {
+    display: none;
+}
 @media only screen and (max-width: 600px) {
 
 ul#wp-admin-bar-root-default {
@@ -45,11 +49,7 @@ ul#adminmenu {
 @media screen and (min-width: 800px) {
   
 
-#adminmenu .wp-submenu {
-    
-    left: 230px;
-  
-}
+
 .opensub ul.wp-submenu.wp-submenu-wrap {
     background-color: #232546 !important;
     border-radius: 6px;
@@ -142,13 +142,9 @@ div#screen-meta {
 
 
 
-#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
-    width: 230px;
-   }
+
    
-   #wpcontent, #wpfooter {
-    margin-left: 230px;
-}
+
 input#publish {
     background-color: #009688 !important;
 }
@@ -164,7 +160,7 @@ div#wpbody {
     box-shadow: -1px 1px 8px #0000001c;
     border: none;
 	  transition:0.6s;
-	  padding: 10px;
+	  padding: 10px 5px;
 }
 
 #adminmenu a {
@@ -175,6 +171,11 @@ body {
   
     font-family: "Work Sans", sans-serif !important;
 	letter-spacing: 0.8px;
+   
+}
+
+#adminmenu .wp-submenu-head, #adminmenu a.menu-top {
+    font-size: 13px;
    
 }
 
@@ -328,13 +329,7 @@ div#wpbody {
 display:none;
 }
 
-.woocommerce-layout__header {
-    ;
-    width: calc(100% - 245px);
-    top: 32px;
-	  
-    
-}
+
 
 
 .plugin-update-tr.active td, .plugins .active th.check-column {
@@ -550,78 +545,7 @@ add_action('wp_before_admin_bar_render', 'dashboard_logo');
 
 
 
-function my_admin_menu2() {
 
-add_menu_page(
-
-__( 'WooRocket', 'my-textdomain' ),
-
-__( 'Suporte WooRocket', 'my-textdomain' ),
-
-'manage_options',
-
-'sample-page',
-
-'my_admin_page_contents',
-
-'dashicons-schedule',
-
-1
-
-);
-
-}
-
-
-
-add_action( 'admin_menu', 'my_admin_menu2' );
-
-
-
-function my_admin_page_contents() {
-
-?>
-
-<section class="conteudo-prime">
-
-<h1>
-
-<?php esc_html_e( 'Suporte WooRocket', 'my-plugin-textdomain' ); ?>
-	
-	<p>
-		
-		<p>
-			Clique no botão abaixo caso precise de suporte para o site.
-	</p>
-	
-	<a target="_blank" href="https://app.woorocket.com.br/minha-conta/"><button class="btn-ajuda">
-		Acessar suporte
-	</button>
-	</a>	
-	
-	
-	<hr/>
-		<h3>
-			Dicas importantes:
-	</h3>
-		<ul class="primelista">
-			<li>Lembre-se de deixar todos os plugins e temas atualizados.</li>
-			<li>Todo o site foi construindo atráves do UxBuilder (Flatsome)</li>
-			<li>Não insira mídias e arquivos com mais de 1MB</li>
-			<li>Não instale muitos plugins</li>
-			<li>Deixe apenas um tema instalado</li>
-			
-			
-	</ul>
-	
-
-</h1>
-	
-	</section>
-
-<?php
-
-}
 
 
 
