@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: WooRocket
- * Plugin URI: https://woorocket.com.br
+ * Plugin Name: CodeLapa
+ * Plugin URI: https://codelapa.com.br
  * Description: Customize wordpress dashboard
  * Author: Gabriel Lapa
- * Author URI: https://woorocket.com.br
+ * Author URI: https://codelapa.com.br
  * Version: 1.0
  * Requires at least: 4.4
  * Tested up to: 5.8
@@ -21,7 +21,9 @@ add_action('admin_head', 'customizar_painel');
 
 function customizar_painel() {
   echo '<style>
-
+.notice.is-dismissible.pys-optin-notice.pys-notice-wrapper {
+    display: none;
+}
 .updated.success.fs-notice.fs-has-title.fs-slug-wpcf7-redirect.fs-type-plugin {
     display: none !important;
 }
@@ -170,7 +172,7 @@ div#wpbody {
 body {
   
     font-family: "Work Sans", sans-serif !important;
-	letter-spacing: 0.8px;
+	letter-spacing: 0.6px;
    
 }
 
@@ -251,11 +253,11 @@ html.wp-toolbar {
 
 ul#adminmenu:before {
     content: "";
-    background-image: url(https://woorocket.com.br/wp-content/uploads/2022/08/Woo-Rocket.png);
+    background-image: url(https://codelapa.com.br/wp-content/uploads/2023/02/CodeLapa-Light.png);
     display: block;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 90px;
+    width: 140px;
     height: 50px;
     text-align: center;
     margin-left: 10px;
@@ -382,7 +384,7 @@ span.collapse-button-label {
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {
-            background-image: url(https://woorocket.com.br/wp-content/uploads/2022/08/Woo-Rocket.png);
+            background-image: url(https://codelapa.com.br/wp-content/uploads/2023/02/CODELAPA.png);
 		height:65px;
 		width:320px;
 		    background-size: 220px 94px;
@@ -397,8 +399,13 @@ function my_login_logo() { ?>
 		#loginform input[type=submit], #loginform .submit input[type=button] {
     background-color: #e31678 !important;
     
+}.language-switcher {
+    display: none !important;
 }
-		
+	.login #nav {
+    margin: 24px 0 0;
+    text-align: center;
+}	
 		div#wlcms-login-wrapper {
     height: -webkit-fill-available;
 }
@@ -414,36 +421,37 @@ function my_login_logo() { ?>
 }
 div#login {
     min-height: -webkit-fill-available;
-    background-color: #061827d4;
+    background-color: #ffffff;
     left: 0%;
     margin-left: 0;
     padding: 70px;
     width: 300px;
-    box-shadow: 3px 0px 14px #00000033;
+    box-shadow: 3px 0px 14px #00000021;
 }
 		
-	#login p#nav a {
-    color: white !important;
+#login p#nav a {
+    color: #3a0e68 !important;
 }
 		.user-pass-wrap label {
-    color: #510f6c !important;
+    color: #3a0e68 !important;
 }
 		
-		.login form {
-    margin-top: 20px;
-    margin-left: 0;
-    padding: 50px 20px !important;
-    font-weight: 400;
+	.login form {
+    margin-top: 20px !important;
+    margin-left: 0 !important;
+    padding: 26px 24px 34px !important;
+    font-weight: 400 !important;
     overflow: hidden;
-    background: #fff;
-    box-shadow: 9px 9px 0px rgb(59 59 59);
-    border-radius: 15px;
+    background: #efefef !important;
     border: none !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,.04) !important;
 }
 		
-		
+	form#loginform {
+    border-radius: 10px;
+}	
 		body.login {
-    background-image: url(https://woorocket.com.br/wp-content/uploads/2022/11/iStock-1281468896.svg) !important;
+    background-image: url(https://codelapa.com.br/wp-content/uploads/2023/02/CodeLapa-Desenvolvimento-de-Sites.svg) !important;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -535,6 +543,12 @@ section.conteudo-prime {
 tr#user-1 {
     display: none;
 }
+div#custom_dashboard_widget_host h2 {
+    color: white;
+}
+div#custom_dashboard_widget_host {
+    background-image: linear-gradient(45deg, #330e69, #e11678);
+}
         </style>
     ';
 }
@@ -549,7 +563,26 @@ add_action('wp_before_admin_bar_render', 'dashboard_logo');
 
 
 
+// CRIANDO WIDGETS NO PAINEL INICIAL
+
+function custom_dashboard_widget_host() {
+  wp_add_dashboard_widget( 'custom_dashboard_widget_host', 'Suporte', 'custom_dashboard_widget_callback_host' );
+}
+add_action( 'wp_dashboard_setup', 'custom_dashboard_widget_host' );
 
 
+function custom_dashboard_widget_callback_host() {
+  echo '<div class="post-box">';
+  echo '<a target="_blank" href="https://app.codelapa.com.br/" class="button">Acessar Suporte</a>';
+  echo '</div>';
+}
 
 
+function move_custom_dashboard_widget_to_top() {
+  global $wp_meta_boxes;
+  $widget_id = 'custom_dashboard_widget_host';
+  $widget = array( $widget_id => $wp_meta_boxes['dashboard']['normal']['core'][$widget_id] );
+  unset( $wp_meta_boxes['dashboard']['normal']['core'][$widget_id] );
+  $wp_meta_boxes['dashboard']['side']['core'] = $widget + $wp_meta_boxes['dashboard']['side']['core'];
+}
+add_action( 'wp_dashboard_setup', 'move_custom_dashboard_widget_to_top' );
