@@ -21,6 +21,16 @@ add_action('admin_head', 'customizar_painel');
 
 function customizar_painel() {
   echo '<style>
+  div#auto_post_redirection {
+    display: none !important;
+}
+  
+  div#auto_post_redirection {
+    display: none;
+}
+  div#setting-error-tgmpa {
+    display: none;
+}
 .notice.is-dismissible.pys-optin-notice.pys-notice-wrapper {
     display: none;
 }
@@ -29,6 +39,13 @@ function customizar_painel() {
 }
 div#aiowps-dashnotice {
     display: none;
+}
+div#awcfe_notice {
+    display: none;
+}
+
+div#setting-error-tgmpa {
+    display: none !important;
 }
 @media only screen and (max-width: 600px) {
 
@@ -253,7 +270,7 @@ html.wp-toolbar {
 
 ul#adminmenu:before {
     content: "";
-    background-image: url(https://codelapa.com.br/wp-content/uploads/2023/02/CodeLapa-Light.png);
+    background-image: url(https://codelapa.com/wp-content/uploads/2023/03/CodeLapa-Light.png);
     display: block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -372,184 +389,7 @@ span.collapse-button-label {
    
     border-radius: 10px 10px 0px 0px;
 }
-</style>';
-}
-
-
-
-
-
-
-
-function my_login_logo() { ?>
-    <style type="text/css">
-        #login h1 a, .login h1 a {
-            background-image: url(https://codelapa.com.br/wp-content/uploads/2023/02/CODELAPA.png);
-		height:65px;
-		width:320px;
-		    background-size: 220px 94px;
-		background-repeat: no-repeat;
-        	padding-bottom: 30px;
-        }
-		
-		form#loginform p {
-    color: #320c68 !important;
-}
-		
-		#loginform input[type=submit], #loginform .submit input[type=button] {
-    background-color: #e31678 !important;
-    
-}.language-switcher {
-    display: none !important;
-}
-	.login #nav {
-    margin: 24px 0 0;
-    text-align: center;
-}	
-		div#wlcms-login-wrapper {
-    height: -webkit-fill-available;
-}
-		.mo_btn-social.mo_btn-google {
-    display: none;
-}
-	.wp-core-ui .button-primary {
-    background: #e31678 !important;
-    border-color: #e11678 !important;
-}
-		p#backtoblog {
-    display: none;
-}
-div#login {
-    min-height: -webkit-fill-available;
-    background-color: #ffffff;
-    left: 0%;
-    margin-left: 0;
-    padding: 70px;
-    width: 300px;
-    box-shadow: 3px 0px 14px #00000021;
-}
-		
-#login p#nav a {
-    color: #3a0e68 !important;
-}
-		.user-pass-wrap label {
-    color: #3a0e68 !important;
-}
-		
-	.login form {
-    margin-top: 20px !important;
-    margin-left: 0 !important;
-    padding: 26px 24px 34px !important;
-    font-weight: 400 !important;
-    overflow: hidden;
-    background: #efefef !important;
-    border: none !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,.04) !important;
-}
-		
-	form#loginform {
-    border-radius: 10px;
-}	
-		body.login {
-    background-image: url(https://codelapa.com.br/wp-content/uploads/2023/02/CodeLapa-Desenvolvimento-de-Sites.svg) !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-}
-		form#language-switcher {
-    display: none;
-}
-		.mo-openid-app-icons {
-    display: none;
-}
-		
-		.privacy-policy-page-link {
-    display: none;
-}
-		
-		
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
-
-
-
-
-//changing the url on the logo to redirect them
-function mb_login_url() {  return home_url(); }
-add_filter( 'login_headerurl', 'https://woorocket.com.br/' );
-
-
-
-
-function dashboard_logo() {
-    echo '
-        <style type="text/css">
-#wpadminbar #wp-admin-bar-wp-logo>.ab-item {
-    padding: 0 7px;
-    background-image: url(https://mktprime.com/wp-content/uploads/2021/11/Marketing-Prime.svg) !important;
-    background-size: 70%;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-}
-#wpadminbar #wp-admin-bar-wp-logo>.ab-item .ab-icon:before {
-    content: " ";
-    top: 2px;
-}
-
-
-
-
-
-
-button.logout {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    display: block;
-    text-decoration: none !important;
-    margin: 10px 0px;
-    font-size: 70%;
-    padding: 5px 20px;
-}
-section.conteudo-prime a {
-    text-decoration: none;
-}
-section.conteudo-prime {
-    padding: 30px;
-    background-color: white;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 5px #00000036;
-    margin-left: 0px;
-}
-  div#setting-error-tgmpa {
-    display: none;
-}
-.notice.notice-success.is-dismissible {
-    display: none;
-}
-.primelista li:before {
-    content: "\2022";
-    font-size: 30px;
-    display: inline-block;
-    position: absolute;
-    margin-left: -20px;
-    color: #f3007a;
-}
-
-tr#user-1 {
-    display: none;
-}
-div#custom_dashboard_widget_host h2 {
-    color: white;
-}
-div#custom_dashboard_widget_host {
-    background-image: linear-gradient(45deg, #330e69, #e11678);
-}
-        </style>
+</style>
     ';
 }
 add_action('wp_before_admin_bar_render', 'dashboard_logo');
